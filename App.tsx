@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import Navigator from './components/Navigator'
+import NoteTitle from './components/NoteTitle';
 
 export default function App() {
   return (
@@ -10,7 +11,9 @@ export default function App() {
         <Navigator></Navigator>
 
         <ScrollView style={styles.content}>
+          <NoteTitle>
 
+          </NoteTitle>
         </ScrollView>
       </View>
 
@@ -27,8 +30,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#f2f2f2',
   },
   innerContainer: {
-    padding: 11,
-    flex: 1,
+    padding: 15,
     flexDirection: 'column',
   },
   text: {
