@@ -3,14 +3,23 @@
  */
 
 import React from 'react'
-import { ScrollView, StyleSheet, Text, View } from 'react-native';
+import { ScrollView, StyleSheet, Text, View, Image } from 'react-native';
 
 
 export default function Navigator() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>分类</Text>
+      <Text style={styles.text_sorting}>分类</Text>
       <View style={styles.tools}></View>
+      <Image
+        style={styles.img}
+        source={require('../assets/search.png')} />
+      <Image
+        style={styles.img}
+        source={require('../assets/gear.png')} />
+      <Image
+        style={styles.img}
+        source={require('../assets/add.png')} />
     </View>
   )
 }
@@ -20,7 +29,7 @@ export default function Navigator() {
  */
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: 'green',
+    backgroundColor: '#f2f2f2',
     flexDirection: 'row',
     height: 55,
     padding: 5,
@@ -28,14 +37,20 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     alignContent: 'space-between',
   },
-  text: {
-    color: 'blue',
+  text_sorting: {
+    color: '#415058',
     fontSize: 28
   },
   tools: {
     flex: 1,
     height: 24,
-    backgroundColor: 'yellow',
+    backgroundColor: '#f2f2f2',
     alignContent: 'flex-end',
+  },
+  img: {
+    width: 24,
+    height: 24,
+    marginLeft: 8,
+    marginRight: 8,
   }
 })

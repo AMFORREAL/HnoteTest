@@ -16,9 +16,10 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     borderRadius: 17,
     justifyContent: 'center',
-    padding: 3,
+    padding: 8,
   },
   text: {
     fontSize: 16,
+    color: '#101010'
   }
 })

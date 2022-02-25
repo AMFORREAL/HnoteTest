@@ -1,52 +1,39 @@
+import { NavigationContainer, } from '@react-navigation/native';
 import { StatusBar } from 'expo-status-bar';
-import { ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Button, ScrollView, StyleSheet, Text, View } from 'react-native';
 import Navigator from './components/Navigator'
 import NoteTitle from './components/NoteTitle';
+import Home from './pages/Home';
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
+import { Header } from 'react-native/Libraries/NewAppScreen';
+
+
+const BlankHeader = () => {
+  return (
+    <View style={{
+      height: 34,
+      backgroundColor: '#f2f2f2',
+    }}></View>
+  )
+}
+
+const Stack = createNativeStackNavigator()
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <View style={styles.statusBar}></View>
-      <View style={styles.innerContainer}>
-        <Navigator></Navigator>
+    <NavigationContainer>
+      <BlankHeader></BlankHeader>
+      <Stack.Navigator>
+        <Stack.Screen
+          name='Home'
+          component={Home}
+          options={{
+            headerShown: false,
+          }} />
+      </Stack.Navigator>
+    </NavigationContainer>
 
-        <ScrollView style={styles.content}>
-          <NoteTitle>
-
-          </NoteTitle>
-        </ScrollView>
-      </View>
-
-      <StatusBar style="auto" />
-    </View>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    flexDirection: 'column',
-    alignContent: 'flex-start',
-    backgroundColor: '#f2f2f2',
-  },
-  innerContainer: {
-    padding: 15,
-    flexDirection: 'column',
-  },
-  text: {
-    color: '#1e90ff',
-    fontSize: 40,
-  },
-  statusBar: {
-    height: 40,
-    backgroundColor: 'orange'
-  },
-  capitalText: {
-    color: '#43525a'
-  },
-  content: {
-    padding: 3,
-    marginTop: 1,
-  }
 
-});
