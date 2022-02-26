@@ -1,9 +1,10 @@
 import { NavigationContainer, } from '@react-navigation/native';
 import { StatusBar } from 'expo-status-bar';
 import { Button, ScrollView, StyleSheet, Text, View } from 'react-native';
-import Navigator from './components/Navigator'
-import NoteTitle from './components/NoteTitle';
-import Home from './pages/Home';
+import Navigator from './components/view/Navigator'
+import NoteTitle from './components/view/NoteTitle';
+import HomeScreen from './pages/HomeScreen';
+import EditingScreen from './pages/EditingScreen'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { Header } from 'react-native/Libraries/NewAppScreen';
 
@@ -25,11 +26,18 @@ export default function App() {
       <BlankHeader></BlankHeader>
       <Stack.Navigator>
         <Stack.Screen
-          name='Home'
-          component={Home}
+          name='HomeScreen'
+          component={HomeScreen}
           options={{
             headerShown: false,
           }} />
+        <Stack.Screen
+          name='EditingScreen'
+          component={EditingScreen}
+          options={{
+            headerShown: false,
+          }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
 

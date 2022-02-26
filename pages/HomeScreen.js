@@ -1,14 +1,14 @@
 import React from 'react'
 import { Text, View, StyleSheet, ScrollView } from 'react-native'
 import { StatusBar } from 'expo-status-bar';
-import Navigator from '../components/Navigator';
-import NoteTitle from '../components/NoteTitle';
+import Navigator from '../components/view/Navigator';
+import NoteTitle from '../components/view/NoteTitle';
 
-export default function Home() {
+export default function HomeScreen({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.innerContainer}>
-        <Navigator></Navigator>
+        <Navigator navigation={navigation}></Navigator>
 
         <ScrollView style={styles.content}>
           <NoteTitle>

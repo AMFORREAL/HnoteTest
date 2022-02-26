@@ -1,8 +1,8 @@
 import React from 'react'
 import { Text, View, StyleSheet, ScrollView } from 'react-native'
 import { StatusBar } from 'expo-status-bar';
-import Navigator from '../../components/Navigator';
-import NoteTitle from '../../components/NoteTitle';
+import Navigator from '../../components/view/Navigator';
+import NoteTitle from '../../components/view/NoteTitle';
 
 function HomeScreen() {
   return (
