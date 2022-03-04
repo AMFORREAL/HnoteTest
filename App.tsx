@@ -24,20 +24,16 @@ export default function App() {
   return (
     <NavigationContainer>
       <BlankHeader></BlankHeader>
-      <Stack.Navigator>
+      <Stack.Navigator
+        screenOptions={{
+          header: () => null
+        }}>
         <Stack.Screen
           name='HomeScreen'
-          component={HomeScreen}
-          options={{
-            headerShown: false,
-          }} />
+          component={HomeScreen} />
         <Stack.Screen
           name='EditingScreen'
-          component={EditingScreen}
-          options={{
-            headerShown: false,
-          }}
-        />
+          component={EditingScreen} />
       </Stack.Navigator>
     </NavigationContainer>
 
