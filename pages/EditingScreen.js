@@ -1,10 +1,13 @@
 import React from 'react'
-import { StyleSheet, View, } from 'react-native'
+import { StyleSheet, TextInput, View, } from 'react-native'
 import EditingHead from '../components/view/EditingHead'
 
 export default function EditingScreen() {
   return (
-    <View></View>
+    <View>
+      <EditingHead></EditingHead>
+      {/* <TextInput></TextInput> */}
+    </View>
   )
 }
 
