@@ -8,7 +8,7 @@ export default function HomeScreen({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.innerContainer}>
-        <Navigator navigation={navigation}></Navigator>
+        <Navigator></Navigator>
 
         <ScrollView style={styles.content}>
           <NoteTitle>
